@@ -1,2 +1,4 @@
 # heyy
-<img src="heyy.gif" width="250" height="200" />
+<p align="center">
+  <img src="https://i.imgur.com/0VfW9WF.gif" />
+</p>
