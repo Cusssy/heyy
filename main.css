@@ -1,0 +1,13 @@
+#heyy{
+    text-align: center;
+    padding-left: 40%;
+    padding-top: 20%;
+}
+/* do for screen mobiles */
+@media only screen and (max-width: 600px) {
+    #heyy{
+        text-align: center;
+        padding-left: 20%;
+        padding-top: 90%;
+    }
+}
