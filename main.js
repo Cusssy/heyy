@@ -24,7 +24,7 @@ function menulist() {
 
 var ElementosClick = [];
 var contador = 0;
-var audio = new Audio("effect.mp3");
+var audio = new Audio("src/effect.mp3");
 var clickEnabled = true;
 
 document.addEventListener("mousedown", captura_click);
