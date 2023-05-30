@@ -22,32 +22,59 @@ function menulist() {
     }
 }
 
-var ElementosClick = []; // Array vacío para almacenar los elementos clicados
-var contador = 0; // Contador de clics
+var ElementosClick = [];
+var contador = 0;
+var audio = new Audio("effect.mp3");
+var clickEnabled = true;
 
-document.onclick = captura_click;
+document.addEventListener("mousedown", captura_click);
 
 function captura_click(e) {
-  var HaHechoClick;
-  if (e == null) {
-    HaHechoClick = event.srcElement;
-  } else {
-    HaHechoClick = e.target;
+  if (!clickEnabled) {
+    return;
   }
 
-  if (HaHechoClick.tagName.toLowerCase() === "img" && HaHechoClick.src.toLowerCase().endsWith(".gif")) {
+  var HaHechoClick = e.target;
+
+  if (
+    HaHechoClick.tagName.toLowerCase() === "img" &&
+    HaHechoClick.src.toLowerCase().endsWith(".gif")
+  ) {
     ElementosClick.push(HaHechoClick);
-    contador++; // Incrementar el contador
+    contador++;
 
     if (contador >= 15) {
-      // Redirigir a Rick Roll
-        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-      contador = 0; // Reiniciar el contador
+      clickEnabled = false;
+      audio.play();
+
+      var overlay = document.createElement("div");
+      overlay.classList.add("overlay");
+
+      var image = document.createElement("img");
+      image.src =
+        "src/nerd.webp";
+      image.classList.add("image");
+
+      overlay.appendChild(image);
+      document.body.appendChild(overlay);
+
+      setTimeout(function () {
+        overlay.classList.add("fadeout");
+        setTimeout(function () {
+          overlay.remove();
+          clickEnabled = true;
+        }, 2000);
+      }, 5000);
     } else {
-      console.log("Contador:", contador); // Imprimir el contador en la consola
+      console.log("Contador:", contador);
     }
   }
 }
+
+setInterval(function () {
+  contador = 0;
+}, 5000);
+
 
 // Reiniciar el contador cada 5 segundos
 setInterval(function () {
