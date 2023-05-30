@@ -8,7 +8,6 @@ function menulist() {
         var enlaces = [
             { texto: "Twitter cutter", url: "https://cutter.cusssy.com" },
             { texto: "WordFinder", url: "https://github.com/cusssy/WordFinder" },
-            { texto: "🔒", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
             
             // Agrega más enlaces según sea necesario
         ];
