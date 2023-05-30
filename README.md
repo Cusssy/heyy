@@ -1,4 +1,2 @@
 # heyy
-<div style="text-align: center;">
-  ![alt text](https://i.imgur.com/0VfW9WF.gif "Our logo")
-</div>
+<img src="relative/path/to/img.gif" width="250" height="200" />
