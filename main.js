@@ -64,7 +64,7 @@ function captura_click(e) {
           overlay.remove();
           clickEnabled = true;
         }, 2000);
-      }, 5000);
+      }, 10000);
     } else {
       console.log("Contador:", contador);
     }
