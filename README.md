@@ -1,4 +1,4 @@
 # heyy
-<centrer>
-![heyy](https://i.imgur.com/0VfW9WF.gif) 
-</center>
+<div style="text-align: center;">
+  ![alt text](https://i.imgur.com/0VfW9WF.gif "Our logo")
+</div>
