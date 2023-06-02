@@ -1,26 +1,34 @@
 function menulist() {
-    var enlacesContainer = document.getElementById("enlacesContainer");
-    
-    // Verificar si el contenedor de enlaces tiene contenido
-    if (enlacesContainer.innerHTML !== "") {
-        enlacesContainer.innerHTML = ""; // Limpiar el contenido si ya existe
-    } else {
-        var enlaces = [
-            { texto: "Twitter cutter", url: "https://cutter.cusssy.com" },
-            { texto: "WordFinder", url: "https://github.com/cusssy/WordFinder" },
-            
-            // Agrega más enlaces según sea necesario
-        ];
-    
-        enlaces.forEach(function(enlace) {
-            var etiquetaA = document.createElement("a");
-            etiquetaA.href = enlace.url;
-            etiquetaA.textContent = enlace.texto;
-            enlacesContainer.appendChild(etiquetaA);
-            enlacesContainer.appendChild(document.createElement("br"));
-        });
-    }
+  var enlacesContainer = document.getElementById("enlacesContainer");
+
+  // Verificar si el contenedor de enlaces tiene contenido
+  if (enlacesContainer.innerHTML !== "") {
+      enlacesContainer.innerHTML = ""; // Limpiar el contenido si ya existe
+      enlacesContainer.classList.remove("mostrar"); // Eliminar la clase "mostrar"
+  } else {
+
+      var enlaces = [
+          { texto: "Twitter cutter", url: "https://cutter.cusssy.com" },
+          { texto: "WordFinder", url: "https://github.com/cusssy/WordFinder" },
+
+          // Agrega más enlaces según sea necesario
+      ];
+
+      enlaces.forEach(function(enlace) {
+          var etiquetaA = document.createElement("a");
+          etiquetaA.href = enlace.url;
+          etiquetaA.textContent = enlace.texto;
+          etiquetaA.id = "lista"; // Agregar esta línea para asignar la ID "lista"
+          enlacesContainer.appendChild(etiquetaA);
+          enlacesContainer.appendChild(document.createElement("br"));
+      });
+
+      // Agregar la clase "mostrar" después de agregar los enlaces para activar la transición
+      enlacesContainer.classList.add("mostrar");
+  }
 }
+
+
 
 var ElementosClick = [];
 var contador = 0;
@@ -70,11 +78,6 @@ function captura_click(e) {
     }
   }
 }
-
-setInterval(function () {
-  contador = 0;
-}, 5000);
-
 
 // Reiniciar el contador cada 5 segundos
 setInterval(function () {
