@@ -3,8 +3,10 @@ function menulist() {
 
   // Verificar si el contenedor de enlaces tiene contenido
   if (enlacesContainer.innerHTML !== "") {
-      enlacesContainer.innerHTML = ""; // Limpiar el contenido si ya existe
-      enlacesContainer.classList.remove("mostrar"); // Eliminar la clase "mostrar"
+      enlacesContainer.style.opacity = 0; // Establecer la opacidad en 0
+      setTimeout(function() {
+          enlacesContainer.innerHTML = ""; // Limpiar el contenido después de que la transición haya finalizado
+      }, 300); // Ajusta la duración de la transición (en milisegundos) según tus necesidades
   } else {
 
       var enlaces = [
@@ -23,8 +25,10 @@ function menulist() {
           enlacesContainer.appendChild(document.createElement("br"));
       });
 
-      // Agregar la clase "mostrar" después de agregar los enlaces para activar la transición
-      enlacesContainer.classList.add("mostrar");
+      // Aplicar una pequeña demora antes de establecer la opacidad en 1 para que la transición se active correctamente
+      setTimeout(function() {
+          enlacesContainer.style.opacity = 1;
+      }, 10);
   }
 }
 
