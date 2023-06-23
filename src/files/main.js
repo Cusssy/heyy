@@ -14,11 +14,11 @@ if (command === 'help') {
 } else if (command === 'clear') {
     outputDiv.innerHTML = '';
 } else if (command === 'exit') {
-    outputDiv.innerHTML += 'Bye bye!<br>';
+    window.close()
 } else if (command === 'info') {
     outputDiv.innerHTML += "Version 1.0.0<br> Twitter: <a href='https://twitter.com/cusssy_'>cusssy_</a><br>discord: cusssy<br> Github: <a href='https://github.com/Cusssy'>Cusssy</a><br>";
 } else if (command === 'repo') {
-    outputDiv.innerHTML += 'Lista de mis proyectos<br><br> -    <a href="https://github.com/Cusssy/tweet-cutter">Tweet cutter</a><br><br>Cree esta pagina web usando ChatGPT para poder ver todo el potencia que puede dar esta IA, puedo asegurar que no habre editado mas de 20 lineas de codigo en total, 99% lo ha hecho la IA, asique nada mas este proyecto se va a quedar aqui pero no creo que le haga muchos cambios en un futuro<br><br> URL: <a href="https://cutter.cusssy.com">Tweet Cutter</a><br><br> -    <a href="https://github.com/Cusssy/WordFinder">WordFinder</a><br><br>Un sencillo programa que usa la whisper la inteligencia artificia de OpenAI para transcribir todos tus videos/audios a texto el cual sera almacenado en una base de datos de mongoDB.<br><br> -    WordFinder_Twitch | <a style="color: red">Aun no esta disponible</a><br> <br>Mismo funcionamiento a WordFinder pero para Twitch, descarga todos los clips de un canal, los procesa y los sube a la base de datos de mongoDB.<br><br>';
+    outputDiv.innerHTML += 'Lista de mis proyectos<br><br> -    <a href="https://github.com/Cusssy/tweet-cutter">Tweet cutter</a><br><br>Cree esta pagina web usando ChatGPT para poder ver todo el potencia que puede dar esta IA, puedo asegurar que no habre editado mas de 20 lineas de codigo en total, 99% lo ha hecho la IA, asique nada mas este proyecto se va a quedar aqui pero no creo que le haga muchos cambios en un futuro<br><br> Web: <a href="https://cutter.cusssy.com">Tweet Cutter</a><br><br> -    <a href="https://github.com/Cusssy/WordFinder">WordFinder</a><br><br>Un sencillo programa que usa la whisper la inteligencia artificia de OpenAI para transcribir todos tus videos/audios a texto el cual sera almacenado en una base de datos de mongoDB.<br><br> -    WordFinder_Twitch | <a style="color: red">Aun no esta disponible</a><br> <br>Mismo funcionamiento a WordFinder pero para Twitch, descarga todos los clips de un canal, los procesa y los sube a la base de datos de mongoDB.<br><br>...<br><br> <a href="https://github.com/Cusssy?tab=repositories">Otros repositorios.</a><br><br>';
 } else if (command === 'heyy') {
     outputDiv.innerHTML += 'Heyy!<br>';
 } else if (command === 'github') {
