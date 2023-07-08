@@ -11,7 +11,8 @@ function menulist() {
 
       var enlaces = [
           { texto: "Twitter cutter", url: "https://cutter.cusssy.com" },
-          { texto: "WordFinder", url: "https://github.com/cusssy/WordFinder" },
+          { texto: "WordFinder", url: "https://wordfinder.cusssy.com" },
+          { texto: "AntiGPT", url: "https://antigpt.cusssy.com" },
 
           // Agrega más enlaces según sea necesario
       ];
